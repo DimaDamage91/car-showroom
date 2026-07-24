@@ -11,6 +11,10 @@ interface VehicleCardProps {
 }
 
 export const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle }) => {
+
+  const discountPercentage = vehicle.discountPercentage;
+  const discountPrice = vehicle.price - vehicle.price / 100 * discountPercentage;
+
   return (
       <Link className="vehicle-link" to={`/vehicles/${vehicle.id}`}>
         <article className="vehicle-card">
@@ -20,7 +24,22 @@ export const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle }) => {
             <h3 className="vehicle-card__title">{vehicle.title}</h3>
           </div>
           <Rating rating={vehicle.rating}/>
-          <h4 className="vehicle-card__price">{Math.floor(vehicle.price)} $</h4>
+          <div className="vehicle-page__price__origin">
+                  <h5
+                    className={
+                      vehicle.discountPercentage > 0
+                        ? "vehicle-page__price__old"
+                        : ""  
+                    }
+                  >
+                  {Math.floor(vehicle.price)} $</h5>
+                  {vehicle.discountPercentage > 0 && (
+                    <div className="vehicle-page__price__discount">
+                      <h3>{Math.floor(discountPrice)} $</h3>
+                      <h6>-{discountPercentage}%</h6>
+                    </div>
+                  )}
+                </div>
           <p
             className={`availability ${
               vehicle.availabilityStatus === "In Stock"

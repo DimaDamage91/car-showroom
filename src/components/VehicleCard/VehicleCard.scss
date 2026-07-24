@@ -28,7 +28,24 @@
 
 
   &__price {
-    color: $main-black;
+    &__origin {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: $main-black;
+    }
+
+    &__old {
+      color: red;
+      text-decoration: line-through;
+    }
+
+    &__discount {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: $main-black;
+    }
   }
 }
 
