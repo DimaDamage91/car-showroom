@@ -6,7 +6,7 @@ The application displays a catalog of vehicles fetched from the API, provides na
 
 ## Live Demo
 
-🔗 Live website: [LIVE DEMO]()
+🔗 Live website: [LIVE DEMO](https://dimadamage91.github.io/car-showroom/)
 
 ## Features
 
@@ -93,25 +93,25 @@ Contains reusable project resources:
 #### 1.Clone the repository:
 
 ```
-//git clone https://github.com/DimaDamage91/Phone-Catalog-Portfolio
+git clone https://github.com/DimaDamage91/car-showroom.git
 ```
 
 #### 2.Navigate to the project directory:
 
 ```
-//cd Phone-Catalog-Portfolio
+cd car-showroom
 ```
 
 #### 3.Install dependencies:
 
 ```
-//npm install
+npm install
 ```
 
 #### 4.Run the project locally:
 
 ```
-npm start
+npm run dev
 ```
 
-#### 5.Open your browser and visit `http://localhost:3000` to view the application.
+#### 5.Open your browser and visit `http://localhost:5173/car-showroom/` to view the application.
