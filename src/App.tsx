@@ -1,12 +1,12 @@
-import { BrowserRouter } from 'react-router-dom';
 import { AppRouter } from './router/AppRouter';
 import "./App.scss";
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
+import { HashRouter } from 'react-router-dom';
 
 export const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="app">
         <Header/>
           <main className="main-block">
@@ -16,7 +16,7 @@ export const App = () => {
           </main>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
