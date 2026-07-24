@@ -6,7 +6,7 @@ import { Footer } from './components/Footer/Footer';
 
 export const App = () => {
   return (
-    <BrowserRouter basename="/car-showroom">
+    <BrowserRouter>
       <div className="app">
         <Header/>
           <main className="main-block">
