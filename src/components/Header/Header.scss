@@ -1,0 +1,28 @@
+@use "../../utils/consts.scss" as *;
+
+.header {
+  background-color: $main-black;
+  margin-bottom: 20px;
+  
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  &__title {
+    margin: 0;
+    color: white;
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 300;
+    transition: color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      color: $dark-grey;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}

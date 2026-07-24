@@ -1,0 +1,25 @@
+@use "../../utils/consts.scss" as *;
+@use "../../utils/mixins.scss" as *;
+
+.footer {
+  background-color: $main-black;
+  margin-top: 40px;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 7px;
+
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      color: $main-grey;
+      font-size: 16px;
+
+      @include on-tablet() {
+        font-size: 12px;
+      }
+    }
+  }
+}

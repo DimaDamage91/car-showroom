@@ -1,0 +1,12 @@
+@use "../../utils/consts.scss" as *;
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+
+    &__number {
+      padding-right: 5px;
+      color: $main-black;
+    }
+  }

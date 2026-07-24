@@ -1,0 +1,22 @@
+@use "../../utils/mixins.scss" as *;
+@use "../../utils/consts.scss" as *;
+
+.search {
+  width: 25%;
+
+  &__title {
+    margin: 5px 0 10px 0;
+    color: $main-black;
+  }
+
+  &__input {
+    width: 100%;
+    height: 30px;
+    border-radius: 8px;
+    border-color: $dark-grey;
+  }
+
+  @include on-tablet {
+    width: 50%;
+  }
+}

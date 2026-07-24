@@ -1,0 +1,61 @@
+@use "../../utils/consts.scss" as *;
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 500px;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: 600;
+  }
+
+  input,
+  textarea {
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #cfcfcf;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color .2s ease;
+    box-sizing: border-box;
+
+    &:focus {
+      border-color: #2563eb;
+    }
+  }
+
+  input {
+    height: 42px;
+  }
+
+  textarea {
+    min-height: 140px;
+    resize: vertical;
+    line-height: 1.5;
+  }
+
+  button {
+    align-self: flex-start;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s ease;
+
+    &:hover {
+      background: #1d4ed8;
+    }
+
+    &:active {
+      transform: scale(.98);
+    }
+  }
+}

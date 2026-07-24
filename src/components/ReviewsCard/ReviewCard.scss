@@ -1,0 +1,23 @@
+@use "../../utils/consts.scss" as *;
+
+.review-card {
+  border: 1px solid grey;
+  width: 200px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $main-grey;
+  border-radius: 5px;
+
+
+  &__name {
+    margin: 5px 0 5px 0;
+  }
+
+  &__text {
+    max-width: 100px;
+    overflow-wrap: anywhere;
+  }
+}
+

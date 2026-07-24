@@ -1,0 +1,9 @@
+.reviews {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}

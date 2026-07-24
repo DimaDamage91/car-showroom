@@ -1,0 +1,33 @@
+@use "../../utils/consts.scss" as *;
+
+.back-button {
+  margin-top: 24px;
+  padding-left: 0;
+
+  &__block {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0;
+    border: none;
+
+    background-color: white;
+  }
+
+  &__img {
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+  }
+
+  &__name {
+    margin: 0;
+
+    font-size: 12px;
+    font-weight: 700;
+    color: $dark-grey;
+  }
+
+}
