@@ -1,75 +1,117 @@
-# React + TypeScript + Vite
+# Car Showroom
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Car Showroom is a virtual car showroom application where users can explore available vehicles, view detailed information about each model, and read customer reviews.
 
-Currently, two official plugins are available:
+The application displays a catalog of vehicles fetched from the API, provides navigation between pages, and allows users to open a detailed vehicle page with additional information.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Demo
 
-## React Compiler
+🔗 Live website: [LIVE DEMO]()
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Vehicle Catalog with available car models
+- Fetching vehicle data from REST API
+- Filtering products by vehicle category
+- Detailed Vehicle Page with full information
+- Dynamic routing using React Router
+- Customer reviews display
+- Loading states during data fetching
+- Error handling for failed API requests
+- Not Found page for invalid routes
+- Responsive layout for different screen sizes
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Technologies Used
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- HTML5
+- CSS3
+- SCSS
+- TypeScript
+- React
+- React Router
+- Vite
+- Fetch API
+- REST API
+- Git
+- ESLint
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## API
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+The project uses DummyJSON API as a data source.
+
+Products are fetched from:
+
+https://dummyjson.com/products
+
+The application filters products by vehicle category and displays only relevant car models.
+
+## Project Structure
+
+The project follows a modular architecture with separation between pages, components, and shared resources.
+
+### Modules
+
+Contains page-level components:
+
+- HomePage
+- VehicleDetailsPage
+- NotFoundPage
+
+### Components
+
+Reusable UI components:
+
+- VehicleCard
+- VehicleList
+- BackButton
+- Rating
+- Loader
+- Header
+- Footer
+- ReviewForm
+- ReviewsCard
+- ReviewsList
+- Search
+- VehicleCard
+- VehicleList
+
+### Shared
+
+Contains reusable project resources:
+
+- API constants
+- Fetch functions
+- TypeScript interfaces
+
+### Utils
+
+- mixins
+- scss variables
+
+## ⚙️ Getting Started
+
+#### 1.Clone the repository:
 
 ```
+//git clone https://github.com/DimaDamage91/Phone-Catalog-Portfolio
+```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+#### 2.Navigate to the project directory:
 
 ```
+//cd Phone-Catalog-Portfolio
+```
+
+#### 3.Install dependencies:
+
+```
+//npm install
+```
+
+#### 4.Run the project locally:
+
+```
+npm start
+```
+
+#### 5.Open your browser and visit `http://localhost:3000` to view the application.
