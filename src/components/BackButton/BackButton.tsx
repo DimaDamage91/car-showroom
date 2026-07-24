@@ -11,7 +11,7 @@ export const BackButton: React.FC = () => {
               className="back-button__block"
             >
             <img
-              src="/Chevron(Arrow-Left).png"
+              src={`${import.meta.env.BASE_URL}Chevron(Arrow-Left).png`}
               alt="logo"
               className="back-button__img"
             />
